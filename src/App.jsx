@@ -4,12 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import PokemonCard from "./components/PokemonCard"
-import Mytitle from "./components/MyTitle"
 
 function App() {
   return (
     <div>
-      <Mytitle/>
       <PokemonCard/>
     </div>
   );
