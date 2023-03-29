@@ -1,8 +1,9 @@
 const PokemonCard = (props) => {
+    const {pokemon} = props;
     return <figure>
-        {props.imgSrc === undefined ? <p>???</p> : <img src={props.imgSrc} alt={props.name} /> }
+        {pokemon.imgSrc === undefined ? <p>???</p> : <img src={pokemon.imgSrc} alt={pokemon.name} /> }
         
-        <figcaption>{props.name}</figcaption>
+        <figcaption>{pokemon.name}</figcaption>
     </figure>
 }
 
