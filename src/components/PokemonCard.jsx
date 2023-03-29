@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
 
-const PokemonCard = (props) => {
-    const {pokemon} = props;
+const PokemonCard = ({pokemon}) => {
+
     return <figure>
         {pokemon.imgSrc === undefined ? <p>???</p> : <img src={pokemon.imgSrc} alt={pokemon.name} /> }
         
