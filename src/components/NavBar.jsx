@@ -1,8 +1,8 @@
-const NavBar = ({previous, next}) => {
+const NavBar = ({previous, next, index}) => {
     
     return <nav>
-        <button onClick={previous}>Précédent</button>
-        <button onClick={next}>Suivant</button>
+        {index <= 0 ? undefined : <button onClick={previous}>Précédent</button>}
+        {index >= 4 ? undefined : <button onClick={next}>Suivant</button>}
     </nav>
 }
 

@@ -34,7 +34,7 @@ function App() {
 
     {
       name: "Mew",
-      number: "???",
+      number: "",
     },
   ];
   
@@ -50,7 +50,7 @@ function App() {
    
   return (
     <div>
-      <NavBar previous={handleClickDown} next={handleClickUp}/>
+      <NavBar previous={handleClickDown} next={handleClickUp} index={pokemonIndex}/>
       <PokemonCard pokemonArg={pokemonList[pokemonIndex]}/>
       
     </div>
