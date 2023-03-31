@@ -1,7 +1,7 @@
-const NavBar = ({previous, next, index, buttonName}) => {
+const NavBar = ({previous, next, index, buttonName, setIndex}) => {
     
-    const handleButton = () => {
-
+    const handleButton = (poke) => {
+        {setIndex(buttonName.indexOf(poke))}
     }
 
     return <nav>
@@ -10,7 +10,7 @@ const NavBar = ({previous, next, index, buttonName}) => {
         <br/>
         <br/>
         {buttonName.map((poke, index) => (
-            <button key={index} onClick={handleButton}>{poke.name}</button>
+            <button key={index} onClick={() => handleButton(poke)}>{poke.name}</button>
         ))}
     </nav>
 }

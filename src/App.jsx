@@ -59,7 +59,7 @@ function App() {
 
   return (
     <div>
-      <NavBar previous={handleClickDown} next={handleClickUp} index={pokemonIndex} buttonName={pokemonList}/>
+      <NavBar previous={handleClickDown} next={handleClickUp} index={pokemonIndex} buttonName={pokemonList} setIndex={setPokemonIndex}/>
       <PokemonCard pokemonArg={pokemonList[pokemonIndex]}/> 
     </div>
   );
