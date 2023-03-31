@@ -1,9 +1,10 @@
 import './App.css'
 import {useState} from 'react';
+import { useEffect } from 'react';
 import PokemonCard from "./components/PokemonCard"
 import NavBar from './components/NavBar';
 
-
+alert("Welcome, trainers !")
 
 function App() {
   const pokemonList = [
@@ -47,12 +48,19 @@ function App() {
   const handleClickUp = () => {
     setPokemonIndex(pokemonIndex + 1)
   }
-   
+
+  const currentPokemon = pokemonList[pokemonIndex]
+  if (currentPokemon.number == "025") {
+    setTimeout(() => {
+      alert("Pika !")
+    }, 100)
+    
+  }
+
   return (
     <div>
-      <NavBar previous={handleClickDown} next={handleClickUp} index={pokemonIndex}/>
-      <PokemonCard pokemonArg={pokemonList[pokemonIndex]}/>
-      
+      <NavBar previous={handleClickDown} next={handleClickUp} index={pokemonIndex} buttonName={pokemonList}/>
+      <PokemonCard pokemonArg={pokemonList[pokemonIndex]}/> 
     </div>
   );
 }
