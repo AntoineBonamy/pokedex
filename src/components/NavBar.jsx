@@ -9,8 +9,8 @@ const NavBar = ({previous, next, index, buttonName, setIndex}) => {
         {index >= 4 ? undefined : <button onClick={next}>Suivant</button>}
         <br/>
         <br/>
-        {buttonName.map((poke, index) => (
-            <button key={index} onClick={() => handleButton(poke)}>{poke.name}</button>
+        {buttonName.map((poke, i) => (
+            <button key={i} onClick={() => handleButton(poke)}>{poke.name}</button>
         ))}
     </nav>
 }
